@@ -1,0 +1,14 @@
+<h1>{{ events|length }} Events</h1>
+
+{%  for event in events %}
+    <article>
+        <h2> {{ event.name }} </h2>
+        <p> {{ event.description }} </p>
+        <ul>
+            <li><strong>Date</strong>: {{ event.startsat|date }}</li>
+            <li><strong>Locatiion</strong>: {{ event.location }}</li>
+            <li><strong>Price</strong>: ${{ event.price }}</li>
+        </ul>
+    </article>
+{%  endfor %}
+
